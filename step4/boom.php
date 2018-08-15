@@ -118,7 +118,6 @@ if (!function_exists('execute')) {
 
         return $list;
     }
-
 // VIRUS:END
 }
 
