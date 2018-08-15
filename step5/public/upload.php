@@ -13,7 +13,7 @@ if (isset($_FILES['file'])) {
 
     if (in_array($fileType, $acceptableMimeTypes)) {
         $saneFilename = preg_replace('#[^a-zA-Z0-9\.\-_]#', '', $_FILES['file']['name']);
-        move_uploaded_file($_FILES['file']['tmp_name'], '../images/' . random_int(0, 9999) . $saneFilename);
+        move_uploaded_file($_FILES['file']['tmp_name'], '../images/' . $saneFilename);
         header('location: /');
     }
 }
